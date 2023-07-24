@@ -16,7 +16,7 @@ export default async function page({ params, searchQuery }) {
       <div className=" py-10 bg-zinc-300 flex max-w-screen gap-3 flex-wrap justify-center">
         {products.products.edges.map((d, i) => {
           const data = d.node;
-          return <ProductCard product={data}></ProductCard>;
+          return <ProductCard key={i} product={data}></ProductCard>;
         })}
       </div>
     </div>

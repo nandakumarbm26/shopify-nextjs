@@ -19,6 +19,7 @@ const CollectionsList = ({ collections }) => {
         const data = d.node;
         return (
           <Link
+          key={i}
             href={`/products/collections/${data.handle}`}
             className=" flex flex-col min-w-[300px] max-w-[400px] w-[10vw] bg-stone-100 rounded-lg drop-shadow-md p-5 justify-between "
           >
