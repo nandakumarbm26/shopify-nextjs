@@ -1,8 +1,11 @@
 import Link from "next/link";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ToastContainer from "./components/Toast";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -10,17 +13,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html key="layoutkey" lang="en">
       <body className={inter.className}>
-        <div className="w-full bg-slate-300">
-          <nav className="w-full items-center flex justify-between max-w-5xl mx-auto h-[10vh] ">
-            <Link href="/">App</Link>
-            <Link href="/blogs/123">Blogs</Link>
-          </nav>
-        </div>
-        <div>{children}</div>
+        <ToastContainer/>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
