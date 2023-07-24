@@ -104,6 +104,15 @@ export const getProductsInCollection = (collectionHandle) => {
 	collection(handle: "${collectionHandle}") {
 		id
 		title
+    description
+    seo{
+      description
+      title
+    }
+    image {
+      url
+      altText
+    }
 		products(first: 50, sortKey: BEST_SELLING) {
 			edges {
 				node {

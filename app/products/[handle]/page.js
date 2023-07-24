@@ -4,6 +4,19 @@ import { shopifyQuery } from "@/utils/shopify";
 import { getProductByHandle } from "@/utils/shopifyQuery";
 import Image from "next/image";
 
+export async function generateMetadata({ params, searchParams }, parent) {
+  const { handle } = params;
+  const result = await shopifyQuery(getProductByHandle(handle));
+  const { title, description, featuredImage } = result.product;
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      images: [featuredImage.url],
+    },
+  };
+}
 async function page({ params }) {
   const { handle } = params;
   const values = {
