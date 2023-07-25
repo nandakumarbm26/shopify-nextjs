@@ -32,6 +32,11 @@ export const getAllCollections = gql`
           id
           handle
           title
+          image {
+            url
+            altText
+          }
+          
         }
       }
       pageInfo {

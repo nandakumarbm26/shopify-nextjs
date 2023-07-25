@@ -68,7 +68,10 @@ async function page({ params }) {
             {varients.map((d, i) => {
               const prod = d.node;
               return (
-                <div key={i} className="relative shadow-md w-full h-max group hover:bg-gray-200  transition-all duration-200 ease-linear rounded-lg hover:-translate-y-1">
+                <div
+                  key={i}
+                  className="relative shadow-md w-full h-max group hover:bg-gray-200  transition-all duration-200 ease-linear rounded-lg hover:-translate-y-1"
+                >
                   <Image
                     className=" w-[90px] h-[50px] object-contain group-hover:mix-blend-multiply"
                     src={prod.image.url}
@@ -76,7 +79,7 @@ async function page({ params }) {
                     height={80}
                     alt={"d.title"}
                   />
-                  <div className=" group-hover:text-lg absolute top-0 right-0 text-xs text-black m-2 transition-all duration-200 ease-linear">
+                  <div className="group-hover:text-sm lg:group-hover:text-lg absolute top-0 right-0 text-xs text-black m-2 transition-all duration-200 ease-linear">
                     {prod.title}
                   </div>
                 </div>

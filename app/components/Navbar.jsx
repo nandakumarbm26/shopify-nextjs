@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-2 lg:gap-5">
         <div className="hidden text-[10px] text-gray-700 lg:flex gap-2 lg:gap-5 ">
-          <Link href="/products">Collections</Link>
+          <Link href="/products/collections">Collections</Link>
           <Link href="/products">Products</Link>
           <Link href="#">Offers</Link>
           <Link href="#">Latest Products</Link>
@@ -46,7 +46,12 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <Slider title="Search" open={search} setOpen={setSearch} OutSideClick={true}>
+      <Slider
+        title="Search"
+        open={search}
+        setOpen={setSearch}
+        OutSideClick={true}
+      >
         <div className="input123_field">
           <input
             type="text"
@@ -57,7 +62,7 @@ const Navbar = () => {
       </Slider>
       <Slider title="Menu" open={nav} setOpen={setNav}>
         <SliderItem title="Home" href="/" />
-        <SliderItem title="Collections" href="/products" />
+        <SliderItem title="Collections" href="/products/collections" />
         <SliderItem title="Products" href="/products" />
         <SliderItem title="Offers" />
         <SliderItem title="Latest Products" />

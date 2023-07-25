@@ -26,7 +26,6 @@ const {products,title,description,image}=result.collection
     <div>
       <h1 className="text-xl md:text-3xl font-bold text-slate-700 mb-5">{title}</h1>
       <h2 className="text-base lg:text-lg font-normal text-slate-500 mb-5">{description}</h2>
-      <div>{}</div>
       <ProductsList products={products} />
     </div>
   );

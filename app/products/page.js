@@ -20,7 +20,7 @@ export default async function page({ params, searchQuery }) {
   const collections = await shopifyQuery(getAllCollections);
   const id = 100;
   return (
-    <div className="flex flex-col gap-10 p-2 md:p-4 lg:p-5">
+    <div className="flex w-full flex-col gap-10 p-2 md:p-4 lg:p-5">
       <CollectionsList collections={collections} />
       <ProductsList products={products.products} />
     </div>
