@@ -30,6 +30,7 @@ export default async function page({ params, searchQuery }) {
           const col = d.node;
           return (
             <ProductCard
+            key={i}
               url="collections"
               product={{
                 title: col.title,
